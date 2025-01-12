@@ -25,7 +25,7 @@ async function fetchData(url: string) {
 }
 
 export async function getHomePageData() {
-  throw new Error("Test error");
+  //throw new Error("Test error");
 
   const url = new URL("/api/home-page", baseUrl);
 
