@@ -30,7 +30,7 @@ export async function HeroSection({
 }: {
   readonly data: HeroSectionProps;
 }) {
-  console.dir(data, { depth: null });
+  //console.dir(data, { depth: null });
 
   const user = await getUserMeLoader();
   const userLoggedIn = user?.ok;
@@ -54,7 +54,7 @@ export async function HeroSection({
         <p className="mt-4 text-lg md:text-xl lg:text-2xl">{subHeading}</p>
         <Link
           className="mt-8 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-black bg-white rounded-md shadow hover:bg-gray-100"
-          href={link.url}
+          href={linkUrl}
         >
           {userLoggedIn ? "Dashboard" : link.text}
         </Link>
