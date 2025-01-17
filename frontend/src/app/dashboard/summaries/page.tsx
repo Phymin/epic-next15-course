@@ -51,7 +51,7 @@ interface SearchParamsProps {
 export default async function SummariesRoute({
   searchParams,
 }: SearchParamsProps) {
-  const search = await searchParams;
+  const search = searchParams;
   const query = search?.query ?? "";
   console.log(query);
 

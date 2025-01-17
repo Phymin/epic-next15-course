@@ -5,10 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "1337",
-        pathname: "/uploads/**/*",
+        protocol: "https",
+        hostname: "proud-breeze-80856425d6.media.strapiapp.com",
       },
     ],
   },
