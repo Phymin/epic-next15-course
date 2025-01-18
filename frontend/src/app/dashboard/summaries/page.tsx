@@ -42,15 +42,14 @@ function LinkCard({ documentId, title, summary }: Readonly<LinkCardProps>) {
 }
 
 interface SearchParamsProps {
-  searchParams?: {
+  searchParams?: Promise<{
     page?: string;
     query?: string;
-  };
+  }>;
 }
 
-export default async function SummariesRoute({
-  searchParams,
-}: SearchParamsProps) {
+export default async function SummariesRoute(props: SearchParamsProps) {
+  const searchParams = await props.searchParams;
   const search = searchParams;
   const query = search?.query ?? "";
   console.log(query);
