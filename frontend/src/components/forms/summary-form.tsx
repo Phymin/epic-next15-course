@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { SubmitButton } from "@/components/custom/submit-button";
 
 import { generateSummaryService } from "@/data/services/summary-service";
-import { createSummaryAction } from "@/data/actions/summary-actions";
+import { createSummaryAction, Payload } from "@/data/actions/summary-actions";
 
 interface StrapiErrorsProps {
   message: string | null;
@@ -62,10 +62,10 @@ export function SummaryForm() {
       return;
     }
 
-    const payload = {
+    const payload: Payload = {
       data: {
         title: `Summary for video: ${processedVideoId}`,
-        videoId: processedVideoId,
+        videoId: processedVideoId as string,
         summary: summaryResponseData.data,
       },
     };

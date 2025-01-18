@@ -5,7 +5,7 @@ import { mutateData } from "@/data/services/mutate-data";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
-interface Payload {
+export interface Payload {
   data: {
     title?: string;
     videoId: string;
